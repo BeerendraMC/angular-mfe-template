@@ -47,7 +47,8 @@ module.exports = env => {
           // Comment this out if you don't want to view MFE as a standalone app
           {
             from: `./elements/${projectName}.html`,
-            to: `index.html`
+            to: `index.html`,
+            noErrorOnMissing: true // Prevents errors if the HTML file does not exist
           }
         ]
       })
@@ -55,3 +56,4 @@ module.exports = env => {
     // devtool: 'inline-source-map' // Optional: for easier debugging
   };
 };
+
