@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Angular MFE</title>
+    <script src="./angular-mfe-demo-element.js" type="module"></script>
+    <link href="./angular-mfe-demo-styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <ng-greetings-mfe name="Beerendra"></ng-greetings-mfe>
+    </div>
+    <script>
+      const mfeEl = document.querySelector("ng-greetings-mfe");
+      mfeEl.addEventListener("getGreetingClick", (event) => {
+        console.log("From MFE: ", event.detail);
+      });
+    </script>
+  </body>
+</html>
